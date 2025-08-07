@@ -3,6 +3,9 @@ FROM nodered/node-red:latest
 # Copiamos cualquier configuración inicial
 COPY data /data
 
+# Copiamos la base json
+COPY data/mapeo_imeis.json /data/mapeo_imeis.json
+
 # Railway usa la variable de entorno PORT
 ENV PORT=3000
 EXPOSE 3000
